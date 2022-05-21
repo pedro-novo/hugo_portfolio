@@ -24,11 +24,19 @@ const Shortcuts: React.FC<ShortcutsOption> = ({ column }) => {
 
   return (
     <div className="h-full w-6/12 sm:hidden md:block">
-      <div className="w-full flex justify-evenly items-center ">
-        <a href="#header">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+      <div className="w-full flex justify-evenly items-center text-zinc-300">
+        <a href="#header" className="hover:text-white">
+          Home
+        </a>
+        <a href="#about" className="hover:text-white">
+          About
+        </a>
+        <a href="#portfolio" className="hover:text-white">
+          Portfolio
+        </a>
+        <a href="#contact" className="hover:text-white">
+          Contact
+        </a>
       </div>
     </div>
   );
