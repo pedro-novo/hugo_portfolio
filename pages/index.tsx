@@ -8,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Hugo Conceicao</title>
         <meta name="photography" content="Hugo Conceicao Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/logo/logo-b.png" />
       </Head>
       <Header />
       <Body />
