@@ -4,7 +4,7 @@ import { Header, Body, Footer } from "../components";
 
 const Home: NextPage = () => {
   return (
-    <div className="m-0 p-0">
+    <div>
       <Head>
         <title>Hugo Conceicao</title>
         <meta name="photography" content="Hugo Conceicao Portfolio" />

@@ -2,11 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: hidden;
 }
 

@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { validateFields } from "../../utils/validateFields";
 
-const Form: React.FC = () => {
+type FormProps = {
+  wasSuccessful: boolean;
+  setWasSuccessful: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Form: React.FC<FormProps> = ({ wasSuccessful, setWasSuccessful }) => {
   const [state, setState] = useState<StateObject>({
     firstName: "",
     lastName: "",
@@ -28,16 +34,42 @@ const Form: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(validateFields(state));
-    console.log("state: ", state);
-    if (Object.keys(error).length) {
-      console.log("There is an error");
-      console.log(error);
-    }
+    setIsSubmited(true);
   };
 
+  useEffect(() => {
+    if (!Object.keys(error).length && isSubmitted) {
+      axios
+        .post("https://formsubmit.co/ajax/pedro.novo.93@hotmail.com", {
+          name: "New Contact",
+          firstName: state.firstName,
+          lastName: state.lastName,
+          email: state.email,
+          event: state.selectedOption,
+          message: "I'm from Devro LABS",
+        })
+        .then((response) => {
+          setIsSubmited(false);
+          setState({
+            firstName: "",
+            lastName: "",
+            email: "",
+            selectedOption: "",
+          });
+          setWasSuccessful(true);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [isSubmitted, error, state, setWasSuccessful]);
+
   return (
-    <div className="mt-20 w-full flex justify-center items-center flex-col">
-      <form className="w-[60%]" onSubmit={(e) => handleSubmit(e)}>
+    <div className="w-full flex justify-center items-center flex-col">
+      <h1 className="uppercase text-4xl text-center">Schedule with Me</h1>
+      <p className="mt-10 text-sm text-center">
+        Please fill the form so I can reach to you with the best plan available
+      </p>
+
+      <form className="w-[60%] mt-20" onSubmit={(e) => handleSubmit(e)}>
         <div className="flex w-full">
           <fieldset
             className={error.firstName ? "fieldError w-full" : "field w-full"}

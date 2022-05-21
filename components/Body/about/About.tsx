@@ -8,7 +8,7 @@ const About: React.FC = () => {
   return (
     <div
       id="about"
-      className="w-[95%] mx-auto mt-10 grid xl:grid-cols-3 gap-4 justify-items-center items-center"
+      className="w-[95%] h-full mx-auto mt-4 grid xl:grid-cols-3 gap-4 justify-items-center items-center"
     >
       <AboutSelfPhoto />
       <AboutCard />

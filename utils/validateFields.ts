@@ -11,6 +11,5 @@ export const validateFields = (obj: StateObject) => {
       }
     }
   });
-  console.log(errors);
   return errors;
 };
