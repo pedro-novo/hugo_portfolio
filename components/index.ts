@@ -1,3 +1,3 @@
-export { Body } from "./Body";
-export { Footer } from "./Footer";
-export { Header } from "./Header";
+export { Body } from "./body";
+export { Footer } from "./footer";
+export { Header } from "./header";

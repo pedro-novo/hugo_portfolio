@@ -3,18 +3,18 @@ import Head from "next/head";
 import { Header, Body, Footer } from "../components";
 
 const Home: NextPage = () => {
-	return (
-		<div>
-			<Head>
-				<title>Hugo Conceicao</title>
-				<meta name='photography' content='Hugo Conceicao Portfolio' />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
-			<Header />
-			<Body />
-			<Footer />
-		</div>
-	);
+  return (
+    <div className="m-0 p-0">
+      <Head>
+        <title>Hugo Conceicao</title>
+        <meta name="photography" content="Hugo Conceicao Portfolio" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
 };
 
 export default Home;

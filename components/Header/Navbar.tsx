@@ -1,34 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Shortcuts from "../features/Shortcuts";
+import MobileNavBar from "./MobileNavbar";
 
 const Navbar: React.FC = () => {
-	return (
-		<div className='absolute top-0 left-0 w-full h-[70px] flex justify-between items-center'>
-			<div className='ml-4'>
-				<img src='/images/logo/ralph.png' alt='logo' className='h-[64px]' />
-			</div>
-			<ul className='w-6/12 flex justify-evenly items-center'>
-				<li>
-					<a href='#header' className='transition'>
-						Home
-					</a>
-				</li>
-				<li>
-					<a href='#about' className='transition'>
-						About
-					</a>
-				</li>
-				<li>
-					<a href='#portfolio' className='transition'>
-						Portfolio
-					</a>
-				</li>
-				<li>
-					<a href='#contact'>Contact</a>
-				</li>
-			</ul>
-		</div>
-	);
+  return (
+    <div className="absolute top-0 left-0 w-[100%] flex justify-between items-center">
+      <div className="px-6 py-3">
+        <img src="/images/logo/logo-w.png" alt="logo" className="h-[50px]" />
+      </div>
+      <Shortcuts />
+      <MobileNavBar />
+    </div>
+  );
 };
 
 export default Navbar;
