@@ -23,7 +23,7 @@ const Shortcuts: React.FC<ShortcutsOption> = ({ column }) => {
   }
 
   return (
-    <div className="h-full w-6/12 sm:hidden md:block">
+    <div className="h-full w-6/12 hidden md:block">
       <div className="w-full flex justify-evenly items-center text-zinc-300">
         <a href="#header" className="hover:text-white">
           Home
