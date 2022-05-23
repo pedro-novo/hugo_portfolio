@@ -1,16 +1,17 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import ImageGallery from "../../gallery/ImageGallery";
+import ImageNextGallery from "../../gallery/ImageNextGallery";
 import VideoGallery from "../../gallery/VideoGallery";
 
 const Portfolio: React.FC = () => {
   return (
     <div id="portfolio" className="mt-24">
-      <h4 className="mx-auto uppercase text-4xl text-zinc-600 text-center border-y-4 border-zinc-300 w-[30%]">
+      <h4 className="mx-auto uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-zinc-600 text-center border-y-4 border-zinc-300 w-[30%]">
         My Portfolio
       </h4>
-      <ImageGallery />
-      <h4 className="mx-auto mt-24 uppercase text-4xl text-zinc-600 text-center border-y-4 border-zinc-300 w-[30%]">
+      <ImageNextGallery />
+      <h4 className="mx-auto mt-24 uppercase text-xl md:text-2xl lg:text-3xl xl:text-4xl text-zinc-600 text-center border-y-4 border-zinc-300 w-[30%]">
         Videos
       </h4>
       <VideoGallery />

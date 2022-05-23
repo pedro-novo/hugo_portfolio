@@ -6,7 +6,7 @@ const MobileNavBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="pr-8 md:hidden ease-in-out duration-300">
+    <div className="pr-8 md:hidden ease-in-out duration-300 scrollable">
       <div
         className={
           isOpen
@@ -19,7 +19,7 @@ const MobileNavBar: React.FC = () => {
         <AiOutlineMenu className="text-zinc-300 text-3xl hover:text-zinc-100" />
       </button>
       <div
-        className={`fixed h-screen w-[45vh] top-0 right-0 bg-[rgba(39,39,42,0.98)] ease-in-out duration-300 z-50 ${
+        className={`fixed h-[100vh] w-[45vh] top-0 right-0 bg-[rgba(39,39,42,0.98)] ease-in-out duration-300 z-50 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

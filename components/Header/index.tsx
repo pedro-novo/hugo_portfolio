@@ -1,13 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
+/* eslint-disable jsx-a11y/alt-text */
 import React from "react";
 import Navbar from "./Navbar";
+import Image from "next/image";
+import flowers from "../../public/images/hero/flowers.jpg";
 
 export const Header: React.FC = () => {
   return (
-    <div
-      id="header"
-      className="relative w-[100%] h-[800px] bg-[url('/images/hero/flowers.jpg')] bg-cover bg-no-repeat bg-top text-white"
-    >
+    <div id="header" className="relative w-[100%] h-[800px] text-white">
+      <Image src={flowers} layout="fill" objectFit="cover" priority />
       <div className=" absolute h-full w-full flex justify-center items-center">
         <div className="w-[10%] h-full bg-zinc-600 opacity-80 "></div>
         <div className="relative min-w-[40%] h-full">
@@ -25,7 +25,7 @@ export const Header: React.FC = () => {
             <p className="sm:text-sm md:text-base lg:text-lg mt-8 mb-16">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.{" "}
             </p>
-            <a href="#" className="rotatingThree">
+            <a href="#contact" className="rotatingThree">
               Contact Me
             </a>
           </div>

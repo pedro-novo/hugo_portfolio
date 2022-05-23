@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -9,8 +11,9 @@ module.exports = {
         270: "270deg",
       },
     },
-    screen: {
-      xs: "220px",
+    screens: {
+      xs: "550px",
+      ...defaultTheme.screens,
     },
   },
   plugins: [],
