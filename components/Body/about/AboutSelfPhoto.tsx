@@ -10,6 +10,7 @@ const AboutSelfPhoto: React.FC = () => {
           src={"/images/about/hugo2.png"}
           layout="fill"
           objectFit="contain"
+          priority
         />
       </div>
       <div className="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] h-[420px] w-[250px] border-zinc-900 border-2"></div>

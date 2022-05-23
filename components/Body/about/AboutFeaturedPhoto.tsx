@@ -11,6 +11,7 @@ const AboutFeaturedPhoto: React.FC = () => {
             src={"/images/about/wedding-intro.jpg"}
             layout="fill"
             objectFit="contain"
+            priority
           />
         </div>
       </div>
